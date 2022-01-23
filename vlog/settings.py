@@ -144,7 +144,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 CORS_ORIGIN_ALLOW_ALL = True
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
